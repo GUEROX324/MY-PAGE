@@ -28,7 +28,6 @@ body {
     line-height: 1.6;
     background:
         radial-gradient(720px 380px at 100% -10%, #4d7eaa55 0%, transparent 58%),
-        radial-gradient(520px 300px at 0% 30%, #efe6d614 0%, transparent 55%),
         var(--bg);
 }
 
@@ -282,6 +281,16 @@ h2 {
     font-size: clamp(2rem, 4vw, 2.8rem);
 }
 
+h2::after {
+    content: "";
+    display: block;
+    width: 2.4rem;
+    height: 3px;
+    margin-top: 12px;
+    border-radius: 99px;
+    background: var(--accent);
+}
+
 .section-head p {
     max-width: 24rem;
     color: var(--muted);
@@ -294,7 +303,10 @@ h2 {
 }
 
 .project {
-    padding: 26px;
+    display: grid;
+    grid-template-columns: 8rem minmax(0, 1fr);
+    column-gap: 28px;
+    padding: 26px 28px;
     background: var(--raised);
     border: 1px solid var(--line);
     border-radius: 18px;
@@ -305,10 +317,19 @@ h2 {
 }
 
 .project-top {
+    grid-column: 1;
+    grid-row: 1 / span 4;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.project h3,
+.project > p,
+.project .tags,
+.project .project-links {
+    grid-column: 2;
 }
 
 .status.done {
@@ -316,7 +337,7 @@ h2 {
 }
 
 .project h3 {
-    margin-top: 14px;
+    margin-top: 0;
     font-size: clamp(1.8rem, 3vw, 2.4rem);
 }
 
@@ -336,8 +357,8 @@ h2 {
 .tags li {
     padding: 5px 10px;
     border-radius: 999px;
-    background: var(--beige);
-    color: var(--beige-ink);
+    background: var(--bg);
+    color: var(--ink);
     font-size: 0.82rem;
 }
 
@@ -366,47 +387,6 @@ h2 {
     border-color: var(--accent);
 }
 
-#perfil,
-#documentos {
-    background: var(--beige);
-    color: var(--beige-ink);
-}
-
-#perfil .section-head,
-#documentos .section-head {
-    display: grid;
-    justify-items: start;
-    gap: 10px;
-}
-
-#documentos .section-head p {
-    text-align: left;
-}
-
-#perfil .profile,
-#documentos .docs {
-    background: transparent;
-    border-color: transparent;
-    padding-left: 0;
-    padding-right: 0;
-}
-
-#perfil .profile-copy,
-#documentos .section-head p,
-#documentos .docs p {
-    color: var(--beige-muted);
-}
-
-#perfil .study,
-#documentos .docs li {
-    border-top-color: var(--beige-line);
-}
-
-#perfil .study dt,
-#documentos .docs span {
-    color: var(--beige-label);
-}
-
 .profile {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
@@ -414,6 +394,7 @@ h2 {
     padding: 32px;
     background: var(--raised);
     border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
     border-radius: 18px;
 }
 
@@ -557,6 +538,25 @@ h2 {
 
     .hero {
         padding-top: 40px;
+    }
+
+    .project {
+        grid-template-columns: 1fr;
+    }
+
+    .project-top,
+    .project h3,
+    .project > p,
+    .project .tags,
+    .project .project-links {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .project-top {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .docs li,
