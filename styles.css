@@ -380,6 +380,24 @@ main {
     text-decoration: none;
 }
 
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin-top: 15px;
+}
+
+.project-links a {
+    color: #365470;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-underline-offset: 3px;
+}
+
+.project-links a:hover {
+    color: #a27639;
+}
+
 /* Tabletas */
 @media (max-width: 850px) {
     .hero {
