@@ -6,6 +6,11 @@
     --line: #4a627c;
     --accent: #ff8a5b;
     --accent-ink: #2a1208;
+    --beige: #efe6d6;
+    --beige-ink: #2c261f;
+    --beige-muted: #5c5348;
+    --beige-line: #cfc0aa;
+    --beige-label: #6f6558;
     --header: 4.25rem;
     color: var(--ink);
     background: var(--bg);
@@ -23,7 +28,7 @@ body {
     line-height: 1.6;
     background:
         radial-gradient(720px 380px at 100% -10%, #4d7eaa55 0%, transparent 58%),
-        radial-gradient(480px 280px at 0% 12%, #ff8a5b28 0%, transparent 55%),
+        radial-gradient(520px 300px at 0% 30%, #efe6d614 0%, transparent 55%),
         var(--bg);
 }
 
@@ -206,7 +211,7 @@ h1 {
 }
 
 .button.primary:hover {
-    background: #ffb08a;
+    background: #e86d3c;
 }
 
 .button.ghost {
@@ -249,6 +254,16 @@ h1 {
 
 .facts li {
     font-weight: 650;
+}
+
+.facts {
+    background: var(--beige);
+    color: var(--beige-ink);
+    border-color: var(--beige-line);
+}
+
+.facts span {
+    color: var(--beige-label);
 }
 
 .section {
@@ -321,8 +336,8 @@ h2 {
 .tags li {
     padding: 5px 10px;
     border-radius: 999px;
-    background: #1c2a3c;
-    color: var(--ink);
+    background: var(--beige);
+    color: var(--beige-ink);
     font-size: 0.82rem;
 }
 
@@ -349,6 +364,47 @@ h2 {
 
 .project-links a:hover {
     border-color: var(--accent);
+}
+
+#perfil,
+#documentos {
+    background: var(--beige);
+    color: var(--beige-ink);
+}
+
+#perfil .section-head,
+#documentos .section-head {
+    display: grid;
+    justify-items: start;
+    gap: 10px;
+}
+
+#documentos .section-head p {
+    text-align: left;
+}
+
+#perfil .profile,
+#documentos .docs {
+    background: transparent;
+    border-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#perfil .profile-copy,
+#documentos .section-head p,
+#documentos .docs p {
+    color: var(--beige-muted);
+}
+
+#perfil .study,
+#documentos .docs li {
+    border-top-color: var(--beige-line);
+}
+
+#perfil .study dt,
+#documentos .docs span {
+    color: var(--beige-label);
 }
 
 .profile {
