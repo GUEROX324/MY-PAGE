@@ -4,349 +4,309 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#10233b">
+    <meta name="theme-color" content="#0c1219">
     <meta name="description"
-        content="Perfil académico y proyectos de Enrique Vázquez López, estudiante de Ingeniería en Tecnologías de la Información y desarrollador web full stack.">
+        content="Enrique Vázquez López, estudiante de Ingeniería en Tecnologías de la Información en la BUAP y desarrollador web full stack. Proyectos, formación y conocimientos.">
 
-    <title>Enrique Vázquez López · Perfil académico y proyectos</title>
+    <title>Enrique Vázquez López · Desarrollador web</title>
 
     <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%2310233b'/%3E%3Cpath d='M15 18h34v7H23v10h22v7H23v-3h26v7H15z' fill='%23d8ad62'/%3E%3C/svg%3E">
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230c1219'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Segoe UI, sans-serif' font-size='22' font-weight='700' fill='%23ff8a5b'%3EEV%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header class="top" id="inicio">
-        <div class="shell">
-            <div class="topbar">
-                <a class="brand" href="#inicio">
-                    Enrique Vázquez <span>López</span>
-                </a>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
 
-                <nav class="nav" aria-label="Navegación principal">
-                    <a href="#perfil">Perfil</a>
-                    <a href="#formacion">Formación</a>
-                    <a href="#proyectos">Proyectos</a>
-                    <a href="#conocimientos">Conocimientos</a>
-                    <a href="#documentos">Documentos</a>
-                </nav>
-            </div>
+    <header class="site-header">
+        <div class="shell bar">
+            <a class="brand" href="#inicio">
+                <span aria-hidden="true">EV</span>
+                Enrique Vázquez
+            </a>
 
-            <div class="hero">
-                <div>
-                    <div class="eyebrow">
-                        Perfil académico y portafolio
-                    </div>
+            <nav class="nav" aria-label="Navegación principal">
+                <a href="#perfil">Perfil</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#conocimientos">Conocimientos</a>
+                <a href="#documentos">Documentos</a>
+            </nav>
 
-                    <h1>
-                        Enrique<br>
-                        <em>Vázquez López.</em>
-                    </h1>
-
-                    <p class="lead">
-                        Estudiante de la Licenciatura en Ingeniería en
-                        Tecnologías de la Información en la BUAP y desarrollador
-                        web full stack. Aquí comparto mis proyectos, mi
-                        trayectoria académica y los trabajos que he realizado.
-                    </p>
-
-                    <div class="hero-links">
-                        <a class="button primary" href="#proyectos">
-                            Ver proyectos
-                        </a>
-
-                        <a class="button secondary" href="#documentos">
-                            Documentos académicos
-                        </a>
-                    </div>
-                </div>
-
-                <div class="monogram" aria-hidden="true">
-                    <strong>EV</strong>
-                </div>
-            </div>
+            <a class="github" href="https://github.com/GUEROX324" target="_blank" rel="noopener noreferrer">
+                GitHub
+            </a>
         </div>
     </header>
 
-    <main class="shell">
-        <!-- Perfil y formación -->
+    <main id="contenido">
+        <section class="hero" id="inicio">
+            <div class="shell hero-grid">
+                <div>
+                    <p class="kicker">Puebla, México · BUAP</p>
+
+                    <h1>Enrique Vázquez López</h1>
+
+                    <p class="lead">
+                        Estudiante de Ingeniería en Tecnologías de la
+                        Información y desarrollador web full stack. Construyo
+                        la interfaz, el servicio y la base de datos de una
+                        aplicación.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="button primary" href="#proyectos">Ver proyectos</a>
+                        <a class="button ghost" href="https://github.com/GUEROX324" target="_blank"
+                            rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </div>
+
+                <ul class="facts" aria-label="Datos rápidos">
+                    <li>
+                        <span>Formación</span>
+                        Ingeniería en Tecnologías de la Información
+                    </li>
+                    <li>
+                        <span>Enfoque</span>
+                        Angular, Django y bases de datos
+                    </li>
+                    <li>
+                        <span>Trabajo</span>
+                        Proyectos de equipo y personales
+                    </li>
+                </ul>
+            </div>
+        </section>
+
         <section class="section" id="perfil" aria-labelledby="perfil-title">
-            <div class="section-head">
-                <span class="count">01</span>
-                <h2 id="perfil-title">Sobre mí</h2>
-            </div>
-
-            <div class="intro-grid">
-                <div class="surface about">
-                    <p>
-                        Me interesa desarrollar aplicaciones web completas:
-                        desde las interfaces que utilizan las personas hasta
-                        los servicios y las bases de datos que permiten su
-                        funcionamiento. He trabajado en proyectos individuales
-                        y académicos, y también he coordinado tareas dentro
-                        de equipos de desarrollo.
-                    </p>
-
-                    <p>
-                        Mi meta profesional es seguir creciendo como
-                        desarrollador full stack, participar en proyectos que
-                        resuelvan necesidades reales y fortalecer mis
-                        habilidades técnicas y de trabajo en equipo. En esta
-                        página reúno mis proyectos, conocimientos y documentos
-                        académicos seleccionados.
-                    </p>
+            <div class="shell">
+                <div class="section-head">
+                    <h2 id="perfil-title">Sobre mí</h2>
                 </div>
 
-                <div class="surface fact" id="formacion">
-                    <span class="fact-label">Formación académica</span>
+                <div class="profile">
+                    <p class="statement">
+                        Me interesa desarrollar aplicaciones web completas: desde
+                        las interfaces que utilizan las personas hasta los servicios
+                        y las bases de datos que permiten su funcionamiento.
+                    </p>
 
-                    <strong>
-                        Licenciatura en Ingeniería en Tecnologías de la Información
-                    </strong>
+                    <div class="profile-copy">
+                        <p>
+                            He trabajado en proyectos individuales y académicos, y
+                            también he coordinado tareas dentro de equipos de
+                            desarrollo.
+                        </p>
+                        <p>
+                            Mi meta es seguir creciendo como desarrollador full stack,
+                            participar en proyectos que resuelvan necesidades reales y
+                            fortalecer el trabajo técnico y en equipo.
+                        </p>
+                    </div>
 
-                    <small>
-                        Benemérita Universidad Autónoma de Puebla · Puebla, México
-                    </small>
+                    <dl class="study">
+                        <div>
+                            <dt>Carrera</dt>
+                            <dd>Licenciatura en Ingeniería en Tecnologías de la Información</dd>
+                        </div>
+                        <div>
+                            <dt>Universidad</dt>
+                            <dd>Benemérita Universidad Autónoma de Puebla</dd>
+                        </div>
+                        <div>
+                            <dt>Ciudad</dt>
+                            <dd>Puebla, México</dd>
+                        </div>
+                    </dl>
                 </div>
             </div>
         </section>
 
-        <!-- Proyectos -->
         <section class="section" id="proyectos" aria-labelledby="proyectos-title">
-            <div class="section-head">
-                <span class="count">02</span>
-                <h2 id="proyectos-title">Proyectos</h2>
-            </div>
+            <div class="shell">
+                <div class="section-head">
+                    <h2 id="proyectos-title">Proyectos</h2>
+                    <p>Lo que ya está hecho y lo que estoy planeando.</p>
+                </div>
 
-            <div class="grid">
-                <article class="surface project">
-                    <span class="tag">Proyecto terminado</span>
+                <div class="projects">
+                    <article class="project">
+                        <div class="project-top">
+                            <p class="project-index">01</p>
+                            <p class="status done">Terminado</p>
+                        </div>
 
-                    <h3>GTEA</h3>
+                        <h3>GTEA</h3>
+                        <p>
+                            Plataforma web para gestionar eventos, sedes, aulas e
+                            inscripciones. Formé parte del equipo de programación y
+                            desarrollé la función para exportar información detallada
+                            en PDF y Excel.
+                        </p>
 
-                    <p>
-                        Plataforma web para gestionar eventos, sedes, aulas e inscripciones.
-                        Formé parte del equipo de programación y desarrollé la función para
-                        exportar información detallada en PDF y Excel.
-                    </p>
+                        <ul class="tags">
+                            <li>Angular</li>
+                            <li>Django REST</li>
+                            <li>PDF</li>
+                            <li>Excel</li>
+                        </ul>
 
-                    <div class="tools">
-                        Angular · Django REST · PDF · Excel
-                    </div>
+                        <p class="project-links">
+                            <a href="https://github.com/Guillermo1804/GTEA-Proyect-WebApp" target="_blank"
+                                rel="noopener noreferrer">Ver aplicación web</a>
+                            <a href="https://github.com/Guillermo1804/GTEA-Proyect-Api" target="_blank"
+                                rel="noopener noreferrer">Ver API</a>
+                        </p>
+                    </article>
 
-                    <div class="project-links">
-                        <a href="https://github.com/Guillermo1804/GTEA-Proyect-WebApp" target="_blank"
-                            rel="noopener noreferrer">
-                            Ver aplicación web
-                        </a>
+                    <article class="project">
+                        <div class="project-top">
+                            <p class="project-index">02</p>
+                            <p class="status done">Terminado</p>
+                        </div>
 
-                        <a href="https://github.com/Guillermo1804/GTEA-Proyect-Api" target="_blank"
-                            rel="noopener noreferrer">
-                            Ver API
-                        </a>
-                    </div>
-                </article>
+                        <h3>Tiendify</h3>
+                        <p>
+                            Proyecto personal de comercio electrónico en el que
+                            desarrollé las funcionalidades de la aplicación. También
+                            coordiné tareas de colaboración durante el proyecto.
+                        </p>
 
-                <article class="surface project">
-                    <span class="tag">Proyecto en planeación</span>
+                        <ul class="tags">
+                            <li>Angular</li>
+                            <li>Django</li>
+                            <li>Comercio electrónico</li>
+                        </ul>
 
-                    <h3>CRM de uso general</h3>
+                        <p class="project-links">
+                            <a href="https://github.com/GUEROX324/tiendify-webapp" target="_blank"
+                                rel="noopener noreferrer">Ver aplicación web</a>
+                            <a href="https://github.com/GUEROX324/tiendify-webapp" target="_blank"
+                                rel="noopener noreferrer">Ver API</a>
+                        </p>
+                    </article>
 
-                    <p>
-                        Proyecto personal para desarrollar un CRM sencillo y fácil de usar.
-                        Su objetivo es reunir la información de clientes y contactos, registrar
-                        notas y organizar tareas de seguimiento en un solo lugar.
-                    </p>
+                    <article class="project">
+                        <div class="project-top">
+                            <p class="project-index">03</p>
+                            <p class="status">En planeación</p>
+                        </div>
 
-                    <div class="tools">
-                        Proyecto personal · Desarrollo full stack
-                    </div>
-                </article>
+                        <h3>CRM de uso general</h3>
+                        <p>
+                            Un CRM sencillo para reunir clientes y contactos,
+                            registrar notas y organizar tareas de seguimiento en un
+                            solo lugar.
+                        </p>
 
-                <article class="surface project">
-                    <span class="tag">Proyecto terminado</span>
-
-                    <h3>Tiendify</h3>
-
-                    <p>
-                        Proyecto personal de comercio electrónico en el que desarrollé
-                        las funcionalidades de la aplicación. También coordiné tareas
-                        de colaboración durante el proyecto.
-                    </p>
-
-                    <div class="tools">
-                        Angular · Django · Comercio electrónico
-                    </div>
-
-                    <div class="project-links">
-                        <a href="https://github.com/GUEROX324/tiendify-webapp" target="_blank"
-                            rel="noopener noreferrer">
-                            Ver aplicación web
-                        </a>
-
-                        <a href="https://github.com/GUEROX324/tiendify-webapp" target="_blank"
-                            rel="noopener noreferrer">
-                            Ver API
-                        </a>
-                    </div>
-                </article>
+                        <ul class="tags">
+                            <li>Proyecto personal</li>
+                            <li>Full stack</li>
+                        </ul>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <!-- Conocimientos -->
         <section class="section" id="conocimientos" aria-labelledby="conocimientos-title">
-            <div class="section-head">
-                <span class="count">03</span>
-                <h2 id="conocimientos-title">Conocimientos</h2>
-            </div>
+            <div class="shell">
+                <div class="section-head">
+                    <h2 id="conocimientos-title">Conocimientos</h2>
+                    <p>Frontend, backend, datos y trabajo en equipo.</p>
+                </div>
 
-            <div class="knowledge-grid">
-                <article class="knowledge-card">
-                    <div class="knowledge-card-top">
-                        <span class="knowledge-number">01</span>
-                        <span class="knowledge-label">Área principal</span>
-                    </div>
+                <div class="skills">
+                    <article>
+                        <h3>Frontend</h3>
+                        <p>Interfaces y aplicaciones web adaptables.</p>
+                        <ul class="tags">
+                            <li class="main">Angular</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>SCSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </article>
 
-                    <h3>Desarrollo frontend</h3>
+                    <article>
+                        <h3>Backend</h3>
+                        <p>Servicios y lógica de las aplicaciones.</p>
+                        <ul class="tags">
+                            <li class="main">Django</li>
+                            <li>Django REST</li>
+                            <li>Python</li>
+                            <li>PHP</li>
+                            <li>Java</li>
+                        </ul>
+                    </article>
 
-                    <p>
-                        Construcción de interfaces y aplicaciones web adaptables.
-                    </p>
+                    <article>
+                        <h3>Datos</h3>
+                        <p>Consulta y organización de la información.</p>
+                        <ul class="tags">
+                            <li class="main">MySQL</li>
+                            <li>SQL</li>
+                        </ul>
+                    </article>
 
-                    <div class="knowledge-tags">
-                        <span class="knowledge-tag highlight">Angular</span>
-                        <span class="knowledge-tag">HTML</span>
-                        <span class="knowledge-tag">CSS</span>
-                        <span class="knowledge-tag">SCSS</span>
-                        <span class="knowledge-tag">JavaScript</span>
-                    </div>
-                </article>
-
-                <article class="knowledge-card">
-                    <div class="knowledge-card-top">
-                        <span class="knowledge-number">02</span>
-                        <span class="knowledge-label">Área principal</span>
-                    </div>
-
-                    <h3>Desarrollo backend</h3>
-
-                    <p>
-                        Desarrollo de servicios y lógica para aplicaciones web.
-                    </p>
-
-                    <div class="knowledge-tags">
-                        <span class="knowledge-tag highlight">Django</span>
-                        <span class="knowledge-tag">Django REST</span>
-                        <span class="knowledge-tag">Python</span>
-                        <span class="knowledge-tag">PHP</span>
-                        <span class="knowledge-tag">Java</span>
-                    </div>
-                </article>
-
-                <article class="knowledge-card">
-                    <div class="knowledge-card-top">
-                        <span class="knowledge-number">03</span>
-                        <span class="knowledge-label">Área principal</span>
-                    </div>
-
-                    <h3>Bases de datos</h3>
-
-                    <p>
-                        Organización, consulta y manejo de información para
-                        aplicaciones.
-                    </p>
-
-                    <div class="knowledge-tags">
-                        <span class="knowledge-tag highlight">Bases de datos</span>
-                        <span class="knowledge-tag">MySQL</span>
-                        <span class="knowledge-tag">SQL</span>
-                    </div>
-                </article>
-
-                <article class="knowledge-card">
-                    <div class="knowledge-card-top">
-                        <span class="knowledge-number">04</span>
-                        <span class="knowledge-label">Habilidades complementarias</span>
-                    </div>
-
-                    <h3>Diseño y colaboración</h3>
-
-                    <p>
-                        Participación en el diseño de interfaces y organización
-                        del trabajo en proyectos de desarrollo.
-                    </p>
-
-                    <div class="knowledge-tags">
-                        <span class="knowledge-tag">Diseño de interfaces</span>
-                        <span class="knowledge-tag">Coordinación de equipos</span>
-                    </div>
-                </article>
+                    <article>
+                        <h3>Colaboración</h3>
+                        <p>Diseño de interfaces y organización del equipo.</p>
+                        <ul class="tags">
+                            <li>Diseño de interfaces</li>
+                            <li>Coordinación</li>
+                        </ul>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <!-- Documentos académicos -->
         <section class="section" id="documentos" aria-labelledby="documentos-title">
-            <div class="section-head">
-                <span class="count">04</span>
-                <h2 id="documentos-title">Documentos</h2>
-            </div>
-
-            <div class="documents-grid">
-                <article class="document-card">
-                    <span class="document-category">Perfil profesional</span>
-                    <h3>Currículum</h3>
-
+            <div class="shell">
+                <div class="section-head">
+                    <h2 id="documentos-title">Documentos</h2>
                     <p>
-                        Mi formación, experiencia, conocimientos y proyectos
-                        reunidos en un solo documento.
+                        Currículum, constancias y trabajos de la universidad.
+                        Se publican cuando estén listos para compartir.
                     </p>
+                </div>
 
-                    <span class="document-status">Archivo por agregar</span>
-                </article>
-
-                <article class="document-card">
-                    <span class="document-category">Formación complementaria</span>
-                    <h3>Constancias y certificados</h3>
-
-                    <p>
-                        Documentos de cursos, talleres y actividades de
-                        formación que decida compartir.
-                    </p>
-
-                    <span class="document-status">Archivos por agregar</span>
-                </article>
-
-                <article class="document-card">
-                    <span class="document-category">Universidad</span>
-                    <h3>Trabajos académicos</h3>
-
-                    <p>
-                        Selección de reportes, diagramas y proyectos
-                        realizados durante mi formación.
-                    </p>
-
-                    <span class="document-status">Archivos por agregar</span>
-                </article>
-
-                <article class="document-card">
-                    <span class="document-category">Material adicional</span>
-                    <h3>Otros documentos</h3>
-
-                    <p>
-                        Otros archivos relacionados con mi trayectoria
-                        académica y profesional.
-                    </p>
-
-                    <span class="document-status">Archivos por agregar</span>
-                </article>
+                <ul class="docs">
+                    <li>
+                        <div>
+                            <h3>Currículum</h3>
+                            <p>Formación, experiencia, conocimientos y proyectos.</p>
+                        </div>
+                        <span>Por publicar</span>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Constancias y certificados</h3>
+                            <p>Cursos, talleres y formación complementaria.</p>
+                        </div>
+                        <span>Por publicar</span>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Trabajos académicos</h3>
+                            <p>Reportes, diagramas y proyectos de la universidad.</p>
+                        </div>
+                        <span>Por publicar</span>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="shell">
-            <span>© 2026 Enrique Vázquez López</span>
-            <a href="#inicio">Volver arriba ↑</a>
+        <div class="shell footer-grid">
+            <p>Enrique Vázquez López · Puebla, México</p>
+            <a href="https://github.com/GUEROX324" target="_blank" rel="noopener noreferrer">
+                github.com/GUEROX324
+            </a>
         </div>
     </footer>
 </body>
