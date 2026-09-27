@@ -152,14 +152,23 @@ main {
 .mast {
     background: var(--beige);
     color: var(--beige-ink);
-    padding: 52px 0 44px;
+    padding: 64px 0 40px;
 }
 
 .mast-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.45fr) minmax(220px, 0.7fr);
-    gap: 36px 48px;
+    grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.9fr);
+    gap: 28px 56px;
     align-items: end;
+}
+
+.mast-title {
+    display: block;
+}
+
+.kicker,
+.mast-title h1 {
+    grid-column: auto;
 }
 
 .kicker,
@@ -195,17 +204,17 @@ h2,
 }
 
 h1 {
-    max-width: 9ch;
-    margin-top: 12px;
+    max-width: 10ch;
+    margin-top: 14px;
     color: var(--beige-ink);
-    font-size: clamp(3.2rem, 6.6vw, 5.4rem);
+    font-size: clamp(3.4rem, 6vw, 5.2rem);
 }
 
 .lead {
-    max-width: 34rem;
+    max-width: 32rem;
     margin-top: 18px;
     color: var(--beige-muted);
-    font-size: 1.08rem;
+    font-size: 1.05rem;
 }
 
 .hero-actions {
@@ -245,11 +254,34 @@ h1 {
 }
 
 .facts {
+    grid-column: 1 / -1;
     display: grid;
-    gap: 18px;
-    margin: 0;
-    padding: 4px 0 4px 22px;
-    border-left: 1px solid var(--beige-line);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin: 8px 0 0;
+    padding: 22px 0 0;
+    border-top: 1px solid var(--beige-line);
+}
+
+.mast-note h2 {
+    margin-bottom: 12px;
+    color: var(--accent);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.mast-note .statement {
+    color: var(--beige-ink);
+    font-size: clamp(1.2rem, 1.7vw, 1.45rem);
+}
+
+.mast-note .profile-copy {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 14px;
+    color: var(--beige-muted);
 }
 
 .facts li {
@@ -260,14 +292,23 @@ h1 {
 }
 
 .section {
-    padding: 64px 0;
+    padding: 72px 0;
+}
+
+.study-band {
+    padding: 36px 0 0;
+}
+
+#proyectos {
+    padding-top: 28px;
 }
 
 .section-head {
-    display: grid;
-    justify-items: start;
-    gap: 8px;
-    margin-bottom: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 24px;
+    margin-bottom: 28px;
 }
 
 h2 {
@@ -275,15 +316,14 @@ h2 {
 }
 
 .section-head p {
-    max-width: 36rem;
+    max-width: 22rem;
     color: var(--muted);
+    text-align: right;
 }
 
 .profile {
     display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(220px, 0.72fr);
-    gap: 28px 40px;
-    align-items: start;
+    gap: 28px;
 }
 
 .statement {
@@ -297,8 +337,13 @@ h2 {
 
 .profile-copy {
     display: grid;
-    gap: 14px;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: 18px 36px;
     color: var(--muted);
+}
+
+.profile-copy .statement {
+    grid-column: 1 / -1;
 }
 
 .profile-copy .statement {
@@ -307,10 +352,11 @@ h2 {
 
 .study {
     display: grid;
-    gap: 16px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
     margin: 0;
-    padding: 4px 0 0 18px;
-    border-left: 1px solid var(--line);
+    padding: 0 0 8px;
+    border-top: 0;
 }
 
 .study div {
@@ -319,55 +365,49 @@ h2 {
 }
 
 .projects {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap: 14px;
 }
 
 .project {
     display: grid;
-    grid-template-columns: 6.5rem minmax(0, 1fr);
+    grid-template-columns: auto minmax(0, 1fr) auto;
     grid-template-areas:
-        "rail heading"
-        "rail copy"
-        "rail tags"
-        "rail links";
+        "index heading status"
+        "index copy copy"
+        "index tags links";
     column-gap: 18px;
-    row-gap: 8px;
-    padding: 26px 0;
-    border: 0;
-    border-bottom: 1px solid var(--line);
-    border-radius: 0;
-    background: transparent;
+    row-gap: 10px;
+    padding: 22px 24px;
+    border: 1px solid transparent;
+    border-radius: 18px;
+    background: var(--raised);
     color: var(--ink);
 }
 
-.project:first-child {
-    border-top: 1px solid var(--line);
-}
-
 .project:hover {
-    border-bottom-color: var(--accent);
+    border-color: var(--accent);
 }
 
 .project-top {
-    grid-area: rail;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
+    display: contents;
 }
 
 .project-index {
+    grid-area: index;
     color: var(--beige);
     font-size: 0.95rem;
 }
 
 .status {
+    grid-area: status;
+    align-self: center;
     color: var(--muted);
 }
 
 .project h3 {
     grid-area: heading;
+    align-self: center;
     margin: 0;
     font-size: clamp(1.7rem, 2.8vw, 2.3rem);
 }
@@ -386,6 +426,7 @@ h2 {
 
 .project .tags {
     grid-area: tags;
+    align-self: center;
 }
 
 .tags li {
@@ -410,6 +451,8 @@ h2 {
 
 .project .project-links {
     grid-area: links;
+    align-self: center;
+    justify-self: end;
 }
 
 .project-links a {
@@ -441,18 +484,24 @@ h2 {
 
 .skills {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 28px;
 }
 
 .skills article {
     display: grid;
     gap: 8px;
     align-content: start;
-    padding: 16px 16px 18px;
-    border: 1px solid var(--beige-line);
-    border-radius: 16px;
+    padding: 0 0 0 18px;
+    border: 0;
+    border-left: 1px solid var(--beige-line);
+    border-radius: 0;
     background: transparent;
+}
+
+.skills article:first-child {
+    padding-left: 0;
+    border-left: 0;
 }
 
 .skills h3 {
@@ -474,17 +523,26 @@ h2 {
     color: var(--accent);
 }
 
+#documentos .section-head {
+    display: grid;
+    justify-items: start;
+}
+
+#documentos .section-head p {
+    max-width: 40rem;
+    text-align: left;
+}
+
 .docs li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    padding: 16px 0;
-    border-top: 1px solid var(--line);
+    display: grid;
+    align-content: start;
+    gap: 8px;
+    padding: 16px 0 0;
+    border-top: 2px solid var(--accent);
 }
 
 .docs li:last-child {
-    border-bottom: 1px solid var(--line);
+    border-bottom: 0;
 }
 
 .docs h3 {
@@ -520,36 +578,59 @@ h2 {
 
 @media (max-width: 860px) {
     .mast-grid,
-    .profile,
+    .mast-title,
+    .facts,
+    .profile-copy,
+    .study,
     .skills,
+    .docs,
     .project {
         grid-template-columns: 1fr;
     }
 
-    .facts,
-    .study {
-        padding-left: 0;
-        border-left: 0;
-        border-top: 1px solid var(--beige-line);
-        padding-top: 16px;
+    .lead,
+    .hero-actions,
+    .profile-copy .statement {
+        grid-column: 1;
     }
 
-    .study {
-        border-top-color: var(--line);
+    .hero-actions {
+        margin-top: 18px;
+    }
+
+    .section-head {
+        display: grid;
+        justify-items: start;
+    }
+
+    .section-head p {
+        text-align: left;
     }
 
     .project {
         grid-template-areas:
-            "rail"
+            "index"
             "heading"
+            "status"
             "copy"
             "tags"
             "links";
     }
 
-    .project-top {
-        flex-direction: row;
-        align-items: center;
+    .project .project-links {
+        justify-self: start;
+    }
+
+    .skills article,
+    .skills article:first-child {
+        padding: 16px 0 0;
+        border-left: 0;
+        border-top: 1px solid var(--beige-line);
+    }
+
+    .skills article:first-child {
+        padding-top: 0;
+        border-top: 0;
     }
 }
 
@@ -572,15 +653,14 @@ h2 {
     }
 
     h1 {
-        max-width: none;
-        font-size: clamp(2.6rem, 12vw, 3.5rem);
+        max-width: 10ch;
+        font-size: clamp(2.7rem, 12vw, 3.6rem);
     }
 
     .mast {
         padding: 32px 0 28px;
     }
 
-    .docs li,
     .footer-grid {
         align-items: start;
         flex-direction: column;
